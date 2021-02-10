@@ -15,7 +15,7 @@ public class Whisky {
         this.age = age;
         this.distillery = distillery;
     }
-    
+
     public Long getId() {
         return id;
     }
