@@ -1,13 +1,27 @@
 package com.example.codeclan.whiskytracker.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import javax.annotation.Generated;
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@Entity
 public class Distillery {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column
     private String name;
+
+    @Column
     private String region;
+
+    @JsonIgnoreProperties({"distillery"})
+    @OneToMany(mappedBy = "distillery", fetch=FetchType.LAZY)
     private List<Whisky> whiskies;
 
     public Distillery(String name, String region) {
