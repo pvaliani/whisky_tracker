@@ -73,4 +73,8 @@ public class Whisky {
     public void setDistillery(Distillery distillery) {
         this.distillery = distillery;
     }
+
+    public Whisky(){
+
+    }
 }

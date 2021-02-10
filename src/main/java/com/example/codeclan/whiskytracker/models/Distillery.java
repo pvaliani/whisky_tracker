@@ -62,5 +62,9 @@ public class Distillery {
         this.whiskies = whiskies;
     }
 
+    public Distillery(){
+
+    }
+
 
 }
