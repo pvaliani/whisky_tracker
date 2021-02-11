@@ -11,6 +11,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+// GET /whiskies
+// GET /whiskies?year=1995
+// GET /whiskies?distilleryName=Glendronach&age=15
+// GET /whiskies?distilleryRegion=Speyside
+
 @RestController
 public class WhiskyController {
 
